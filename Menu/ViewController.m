@@ -10,6 +10,10 @@
 #import "GuestTable.h"
 #import "TableCell.h"
 #import "AddTableController.h"
+#import "TableDetailViewController.h"
+#import "Food.h"
+#import "Drink.h"
+
 @interface ViewController ()
 
 @end
@@ -17,6 +21,7 @@
 @implementation ViewController
 @synthesize tables = _tables;
 @synthesize tablesTableView;
+@synthesize items = _items;
 
 - (void)viewDidLoad
 {
@@ -24,8 +29,17 @@
 	// Do any additional setup after loading the view, typically from a nib.
     self.tables = [NSMutableArray array];
     
-    [self.tables addObject:[GuestTable tableWithTableNumber:11 numberOfGuests:2 serverNumber:321]];
-    [self.tables addObject:[GuestTable tableWithTableNumber:42 numberOfGuests:5 serverNumber:321]];
+    self.items = [NSMutableArray array];
+
+    NSMutableArray *empty;
+    
+    [self.items addObject:[Food foodWithName:@"pasta" price:10.99 type:@"entree" ingredients:empty allergyInformation:@"none" modifiers:@"none"]];
+    [self.items addObject:[Food foodWithName:@"steak" price:10.99 type:@"entree" ingredients:empty allergyInformation:@"none" modifiers:@"none"]];
+    [self.items addObject:[Food foodWithName:@"capri" price:10.99 type:@"app" ingredients:empty allergyInformation:@"none" modifiers:@"none"]];
+    [self.items addObject:[Food foodWithName:@"cake" price:10.99 type:@"dessert" ingredients:empty allergyInformation:@"none" modifiers:@"none"]];
+    [self.items addObject:[Food foodWithName:@"chicken" price:10.99 type:@"entree" ingredients:empty allergyInformation:@"" modifiers:@""]];
+    
+    
 }
 
 - (void)viewDidUnload
@@ -58,6 +72,12 @@
     if ([segue.identifier isEqualToString:@"AddViewSegue"]) {
         AddTableController *addVC = (AddTableController *)[(UINavigationController *)segue.destinationViewController topViewController];
         addVC.delegate = self;
+    }
+    else if ([segue.identifier isEqualToString:@"TableDetailSegue"]) {
+        TableDetailViewController *detailVC = segue.destinationViewController;
+        NSIndexPath *indexPath = [self.tablesTableView indexPathForSelectedRow];
+        detailVC.table = [self.tables objectAtIndex:indexPath.row];
+        [self.tablesTableView deselectRowAtIndexPath:indexPath animated:YES];
     }
 }
 

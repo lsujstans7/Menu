@@ -18,6 +18,12 @@
 		5B326DCA15D2B1DE00F5A6FC /* GuestTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B326DC915D2B1DE00F5A6FC /* GuestTable.m */; };
 		5B326DD015D2BACB00F5A6FC /* TableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B326DCF15D2BACB00F5A6FC /* TableCell.m */; };
 		5B8F726215D2D57900E2B7F6 /* AddTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8F726115D2D57900E2B7F6 /* AddTableController.m */; };
+		5B8F727115D2F5A900E2B7F6 /* TableDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8F727015D2F5A900E2B7F6 /* TableDetailViewController.m */; };
+		5B8F727415D2FECD00E2B7F6 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8F727315D2FECD00E2B7F6 /* Item.m */; };
+		5B8F727715D3006E00E2B7F6 /* Food.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8F727615D3006E00E2B7F6 /* Food.m */; };
+		5B8F727A15D3034700E2B7F6 /* Drink.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8F727915D3034700E2B7F6 /* Drink.m */; };
+		5B8F728015D305B900E2B7F6 /* AddItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8F727F15D305B900E2B7F6 /* AddItemViewController.m */; };
+		5B8F728315D3083100E2B7F6 /* AddFoodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8F728215D3083100E2B7F6 /* AddFoodViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +46,18 @@
 		5B326DCF15D2BACB00F5A6FC /* TableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableCell.m; sourceTree = "<group>"; };
 		5B8F726015D2D57900E2B7F6 /* AddTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddTableController.h; sourceTree = "<group>"; };
 		5B8F726115D2D57900E2B7F6 /* AddTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddTableController.m; sourceTree = "<group>"; };
+		5B8F726F15D2F5A900E2B7F6 /* TableDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableDetailViewController.h; sourceTree = "<group>"; };
+		5B8F727015D2F5A900E2B7F6 /* TableDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableDetailViewController.m; sourceTree = "<group>"; };
+		5B8F727215D2FECC00E2B7F6 /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
+		5B8F727315D2FECD00E2B7F6 /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
+		5B8F727515D3006E00E2B7F6 /* Food.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Food.h; sourceTree = "<group>"; };
+		5B8F727615D3006E00E2B7F6 /* Food.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Food.m; sourceTree = "<group>"; };
+		5B8F727815D3034700E2B7F6 /* Drink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Drink.h; sourceTree = "<group>"; };
+		5B8F727915D3034700E2B7F6 /* Drink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Drink.m; sourceTree = "<group>"; };
+		5B8F727E15D305B900E2B7F6 /* AddItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddItemViewController.h; sourceTree = "<group>"; };
+		5B8F727F15D305B900E2B7F6 /* AddItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddItemViewController.m; sourceTree = "<group>"; };
+		5B8F728115D3083100E2B7F6 /* AddFoodViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddFoodViewController.h; sourceTree = "<group>"; };
+		5B8F728215D3083100E2B7F6 /* AddFoodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddFoodViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,9 +106,21 @@
 			children = (
 				5B8F726015D2D57900E2B7F6 /* AddTableController.h */,
 				5B8F726115D2D57900E2B7F6 /* AddTableController.m */,
+				5B8F728115D3083100E2B7F6 /* AddFoodViewController.h */,
+				5B8F728215D3083100E2B7F6 /* AddFoodViewController.m */,
 				5B326DB215D2ADF200F5A6FC /* AppDelegate.h */,
 				5B326DB315D2ADF200F5A6FC /* AppDelegate.m */,
 				5B326DB515D2ADF200F5A6FC /* MainStoryboard.storyboard */,
+				5B8F727215D2FECC00E2B7F6 /* Item.h */,
+				5B8F727315D2FECD00E2B7F6 /* Item.m */,
+				5B8F727E15D305B900E2B7F6 /* AddItemViewController.h */,
+				5B8F727F15D305B900E2B7F6 /* AddItemViewController.m */,
+				5B8F727515D3006E00E2B7F6 /* Food.h */,
+				5B8F727615D3006E00E2B7F6 /* Food.m */,
+				5B8F727815D3034700E2B7F6 /* Drink.h */,
+				5B8F727915D3034700E2B7F6 /* Drink.m */,
+				5B8F726F15D2F5A900E2B7F6 /* TableDetailViewController.h */,
+				5B8F727015D2F5A900E2B7F6 /* TableDetailViewController.m */,
 				5B326DC815D2B1DE00F5A6FC /* GuestTable.h */,
 				5B326DC915D2B1DE00F5A6FC /* GuestTable.m */,
 				5B326DB815D2ADF200F5A6FC /* ViewController.h */,
@@ -181,6 +211,12 @@
 				5B326DCA15D2B1DE00F5A6FC /* GuestTable.m in Sources */,
 				5B326DD015D2BACB00F5A6FC /* TableCell.m in Sources */,
 				5B8F726215D2D57900E2B7F6 /* AddTableController.m in Sources */,
+				5B8F727115D2F5A900E2B7F6 /* TableDetailViewController.m in Sources */,
+				5B8F727415D2FECD00E2B7F6 /* Item.m in Sources */,
+				5B8F727715D3006E00E2B7F6 /* Food.m in Sources */,
+				5B8F727A15D3034700E2B7F6 /* Drink.m in Sources */,
+				5B8F728015D305B900E2B7F6 /* AddItemViewController.m in Sources */,
+				5B8F728315D3083100E2B7F6 /* AddFoodViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
