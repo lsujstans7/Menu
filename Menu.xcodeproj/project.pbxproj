@@ -15,6 +15,9 @@
 		5B326DB415D2ADF200F5A6FC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B326DB315D2ADF200F5A6FC /* AppDelegate.m */; };
 		5B326DB715D2ADF200F5A6FC /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B326DB515D2ADF200F5A6FC /* MainStoryboard.storyboard */; };
 		5B326DBA15D2ADF200F5A6FC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B326DB915D2ADF200F5A6FC /* ViewController.m */; };
+		5B326DCA15D2B1DE00F5A6FC /* GuestTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B326DC915D2B1DE00F5A6FC /* GuestTable.m */; };
+		5B326DD015D2BACB00F5A6FC /* TableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B326DCF15D2BACB00F5A6FC /* TableCell.m */; };
+		5B8F726215D2D57900E2B7F6 /* AddTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8F726115D2D57900E2B7F6 /* AddTableController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,15 +25,21 @@
 		5B326DA315D2ADF200F5A6FC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5B326DA515D2ADF200F5A6FC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5B326DA715D2ADF200F5A6FC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		5B326DAB15D2ADF200F5A6FC /* Menu-Info.plist */ = {isa = PBXFileReference; path = "Menu-Info.plist"; sourceTree = "<group>"; };
+		5B326DAB15D2ADF200F5A6FC /* Menu-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Menu-Info.plist"; sourceTree = "<group>"; };
 		5B326DAD15D2ADF200F5A6FC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5B326DAF15D2ADF200F5A6FC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		5B326DB115D2ADF200F5A6FC /* Menu-Prefix.pch */ = {isa = PBXFileReference; path = "Menu-Prefix.pch"; sourceTree = "<group>"; };
-		5B326DB215D2ADF200F5A6FC /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		5B326DB115D2ADF200F5A6FC /* Menu-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Menu-Prefix.pch"; sourceTree = "<group>"; };
+		5B326DB215D2ADF200F5A6FC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5B326DB315D2ADF200F5A6FC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		5B326DB615D2ADF200F5A6FC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		5B326DB815D2ADF200F5A6FC /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
+		5B326DB815D2ADF200F5A6FC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		5B326DB915D2ADF200F5A6FC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		5B326DC815D2B1DE00F5A6FC /* GuestTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuestTable.h; sourceTree = "<group>"; };
+		5B326DC915D2B1DE00F5A6FC /* GuestTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuestTable.m; sourceTree = "<group>"; };
+		5B326DCE15D2BACB00F5A6FC /* TableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableCell.h; sourceTree = "<group>"; };
+		5B326DCF15D2BACB00F5A6FC /* TableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableCell.m; sourceTree = "<group>"; };
+		5B8F726015D2D57900E2B7F6 /* AddTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddTableController.h; sourceTree = "<group>"; };
+		5B8F726115D2D57900E2B7F6 /* AddTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddTableController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,11 +86,17 @@
 		5B326DA915D2ADF200F5A6FC /* Menu */ = {
 			isa = PBXGroup;
 			children = (
+				5B8F726015D2D57900E2B7F6 /* AddTableController.h */,
+				5B8F726115D2D57900E2B7F6 /* AddTableController.m */,
 				5B326DB215D2ADF200F5A6FC /* AppDelegate.h */,
 				5B326DB315D2ADF200F5A6FC /* AppDelegate.m */,
 				5B326DB515D2ADF200F5A6FC /* MainStoryboard.storyboard */,
+				5B326DC815D2B1DE00F5A6FC /* GuestTable.h */,
+				5B326DC915D2B1DE00F5A6FC /* GuestTable.m */,
 				5B326DB815D2ADF200F5A6FC /* ViewController.h */,
 				5B326DB915D2ADF200F5A6FC /* ViewController.m */,
+				5B326DCE15D2BACB00F5A6FC /* TableCell.h */,
+				5B326DCF15D2BACB00F5A6FC /* TableCell.m */,
 				5B326DAA15D2ADF200F5A6FC /* Supporting Files */,
 			);
 			path = Menu;
@@ -163,6 +178,9 @@
 				5B326DB015D2ADF200F5A6FC /* main.m in Sources */,
 				5B326DB415D2ADF200F5A6FC /* AppDelegate.m in Sources */,
 				5B326DBA15D2ADF200F5A6FC /* ViewController.m in Sources */,
+				5B326DCA15D2B1DE00F5A6FC /* GuestTable.m in Sources */,
+				5B326DD015D2BACB00F5A6FC /* TableCell.m in Sources */,
+				5B8F726215D2D57900E2B7F6 /* AddTableController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +292,7 @@
 				5B326DBF15D2ADF300F5A6FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
