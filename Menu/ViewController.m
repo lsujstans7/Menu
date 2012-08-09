@@ -22,13 +22,13 @@
 @synthesize tables = _tables;
 @synthesize tablesTableView;
 @synthesize items = _items;
+@synthesize currentTable = _currentTable;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     self.tables = [NSMutableArray array];
-    
     
 }
 
@@ -50,6 +50,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+
     TableCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TableCell"];
     GuestTable *instance = [self.tables objectAtIndex:indexPath.row];
     cell.mainLabel.text = [NSString stringWithFormat:@"Table %d", instance.tableNumber];
@@ -68,6 +69,7 @@
         NSIndexPath *indexPath = [self.tablesTableView indexPathForSelectedRow];
         detailVC.table = [self.tables objectAtIndex:indexPath.row];
         NSLog(@"newTable = %@", detailVC.table);
+        self.currentTable = indexPath.row;
         [self.tablesTableView deselectRowAtIndexPath:indexPath animated:YES];
     }
 }

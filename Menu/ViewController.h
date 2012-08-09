@@ -16,5 +16,6 @@
 @property (weak, nonatomic) IBOutlet UITableView *tablesTableView;
 
 @property (nonatomic, strong) NSMutableArray *items;
+@property (nonatomic) int currentTable;
 
 @end

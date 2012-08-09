@@ -28,10 +28,9 @@
     newTable.serverNumber = serverNumber;
     newTable.subtotal = 0.00;
     newTable.total = 0.00;
-    
-    NSMutableArray *empty;
-    
+        
     newTable.tableOrder = [NSMutableArray array];
+    
     
     //[newTable.tableOrder addObject:[Food foodWithName:@"chicken" price:10.99 type:@"entree" ingredients:empty allergyInformation:@"" modifiers:@""]];
     //[newTable.tableOrder addObject:[Food foodWithName:@"chicken" price:10.99 type:@"entree" ingredients:empty allergyInformation:@"" modifiers:@""]];
@@ -40,6 +39,7 @@
     
     return newTable;
 }
+
 
 - (float)getSubtotal;
 {
