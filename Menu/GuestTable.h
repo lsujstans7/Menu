@@ -17,4 +17,8 @@
 @property (nonatomic, strong) NSMutableArray *tableOrder;
 
 + (GuestTable *)tableWithTableNumber:(int)tableNumber numberOfGuests:(int)numberGuests serverNumber:(int)serverNumber;
+
+- (float)getSubtotal;
+
+
 @end

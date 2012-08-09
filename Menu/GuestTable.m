@@ -8,6 +8,7 @@
 
 #import "GuestTable.h"
 #import "Food.h"
+#import "Item.h"
 
 @implementation GuestTable
 
@@ -32,16 +33,25 @@
     
     newTable.tableOrder = [NSMutableArray array];
     
-    [newTable.tableOrder addObject:[Food foodWithName:@"chicken" price:10.99 type:@"entree" ingredients:empty allergyInformation:@"" modifiers:@""]];
-    [newTable.tableOrder addObject:[Food foodWithName:@"chicken" price:10.99 type:@"entree" ingredients:empty allergyInformation:@"" modifiers:@""]];
+    //[newTable.tableOrder addObject:[Food foodWithName:@"chicken" price:10.99 type:@"entree" ingredients:empty allergyInformation:@"" modifiers:@""]];
+    //[newTable.tableOrder addObject:[Food foodWithName:@"chicken" price:10.99 type:@"entree" ingredients:empty allergyInformation:@"" modifiers:@""]];
 
     
     
     return newTable;
 }
 
-
-
+- (float)getSubtotal;
+{
+    float sum = 0;
+    for (int i=0; i<self.tableOrder.count; i++) {
+        Item *currentItem = [self.tableOrder objectAtIndex:i];
+        sum += currentItem.price;
+    }
+    
+    return sum;
+    
+}
 
 
 @end

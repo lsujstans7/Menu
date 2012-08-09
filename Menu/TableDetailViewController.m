@@ -39,8 +39,8 @@
     
     self.tableNumberLabel.text = [NSString stringWithFormat:@"Table %d", self.table.tableNumber];
     self.numGuestsLabel.text = [NSString stringWithFormat:@"number of guests: %d", self.table.numberGuests];
-    self.subtotalLabel.text = [NSString stringWithFormat:@"%.02f", self.table.subtotal];
-    self.totalLabel.text = [NSString stringWithFormat:@"%.02f", self.table.total];
+    self.subtotalLabel.text = [NSString stringWithFormat:@"%.02f", [self.table getSubtotal]];
+    self.totalLabel.text = [NSString stringWithFormat:@"%.02f", ([self.table getSubtotal] + ([self.table getSubtotal] * 0.09 ))] ;
 	// Do any additional setup after loading the view.
 }
 

@@ -99,12 +99,38 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Menu/GuestTable.m"
-         timestampString = "366224749.943773"
+         timestampString = "366232127.638301"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "23"
-         endingLineNumber = "23"
+         startingLineNumber = "24"
+         endingLineNumber = "24"
          landmarkName = "+tableWithTableNumber:numberOfGuests:serverNumber:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Menu/TableDetailViewController.m"
+         timestampString = "366231803.311989"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "45"
+         endingLineNumber = "45"
+         landmarkName = "-viewDidLoad"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Menu/GuestTable.m"
+         timestampString = "366232094.106985"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "44"
+         endingLineNumber = "44"
+         landmarkName = "-getSubtotal"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

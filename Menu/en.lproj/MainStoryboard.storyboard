@@ -283,7 +283,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="U3f-wX-dKn">
-                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="31"/>
+                                                    <rect key="frame" x="20" y="0.0" width="260" height="31"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -304,7 +304,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="Ij7-rD-s9h">
-                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="31"/>
+                                                    <rect key="frame" x="20" y="0.0" width="260" height="31"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -325,7 +325,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="T0d-wO-eTl">
-                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="31"/>
+                                                    <rect key="frame" x="20" y="0.0" width="260" height="31"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -389,6 +389,64 @@
             <point key="canvasLocation" x="-3520" y="-523"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="AddFoodViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddFoodViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="foodName" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="AddItemViewController" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddItemViewController.h"/>
+        </class>
+        <class className="AddTableController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddTableController.h"/>
+            <relationships>
+                <relationship kind="action" name="addTableDone:" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="numberGuestsTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="serverNumberTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="tableNumberTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="ItemCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ItemCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="mainItemLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="ItemTableView" superclassName="UITableView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ItemTableView.h"/>
+        </class>
+        <class className="OrderCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/OrderCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="itemFoodLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="itemPrice" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="TableCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TableCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="mainLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="TableDetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TableDetailViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="numGuestsLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="orderTable" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="subtotalLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="tableNumberLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="totalLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="tablesTableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
