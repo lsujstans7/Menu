@@ -120,6 +120,41 @@
                                 <rect key="frame" x="20" y="104" width="280" height="208"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="OrderCell" id="flf-oo-3iA" customClass="OrderCell">
+                                        <rect key="frame" x="0.0" y="22" width="280" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="280" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="foodItemLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="c36-g2-z9Z">
+                                                    <rect key="frame" x="20" y="11" width="190" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="$100.99" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="CrF-vr-f94">
+                                                    <rect key="frame" x="218" y="11" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.75617781929347827" green="0.0275269852281642" blue="0.018611974008888133" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <connections>
+                                            <outlet property="itemFoodLabel" destination="c36-g2-z9Z" id="d7W-RZ-YGk"/>
+                                            <outlet property="itemPrice" destination="CrF-vr-f94" id="ZFe-w8-hTa"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="y1K-W6-Nzc" id="Zkq-V5-kgK"/>
+                                    <outlet property="delegate" destination="y1K-W6-Nzc" id="5A8-1E-RZD"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -133,6 +168,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="numGuestsLabel" destination="xXf-Vw-gbS" id="rsh-C3-AP4"/>
+                        <outlet property="orderTable" destination="Sq0-rE-Rgk" id="tNJ-C8-wQV"/>
                         <outlet property="subtotalLabel" destination="bH7-FH-ewq" id="mZY-Z8-0gC"/>
                         <outlet property="tableNumberLabel" destination="fOI-kE-a7F" id="sl2-eW-1Wz"/>
                         <outlet property="totalLabel" destination="ipn-iL-LuM" id="aky-gN-Zjg"/>
@@ -353,56 +389,6 @@
             <point key="canvasLocation" x="-3520" y="-523"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="AddFoodViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddFoodViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="foodName" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="AddItemViewController" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddItemViewController.h"/>
-        </class>
-        <class className="AddTableController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddTableController.h"/>
-            <relationships>
-                <relationship kind="action" name="addTableDone:" candidateClass="UIBarButtonItem"/>
-                <relationship kind="outlet" name="numberGuestsTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="serverNumberTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="tableNumberTextField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="ItemCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ItemCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="mainItemLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="ItemTableView" superclassName="UITableView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ItemTableView.h"/>
-        </class>
-        <class className="TableCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TableCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="mainLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="TableDetailViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TableDetailViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="numGuestsLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="subtotalLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="tableNumberLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="totalLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="tablesTableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

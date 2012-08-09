@@ -7,6 +7,8 @@
 //
 
 #import "TableDetailViewController.h"
+#import "OrderCell.h"
+#import "Item.h"
 
 @interface TableDetailViewController ()
 
@@ -19,6 +21,7 @@
 @synthesize totalLabel = _totalLabel;
 
 @synthesize table = _table;
+@synthesize orderTable = _orderTable;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -32,6 +35,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    
     self.tableNumberLabel.text = [NSString stringWithFormat:@"Table %d", self.table.tableNumber];
     self.numGuestsLabel.text = [NSString stringWithFormat:@"number of guests: %d", self.table.numberGuests];
     self.subtotalLabel.text = [NSString stringWithFormat:@"%.02f", self.table.subtotal];
@@ -45,6 +50,7 @@
     [self setNumGuestsLabel:nil];
     [self setSubtotalLabel:nil];
     [self setTotalLabel:nil];
+    [self setOrderTable:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -53,5 +59,23 @@
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
+
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    NSLog(@"count %d", self.table.tableOrder.count);
+    return self.table.tableOrder.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    OrderCell *cell = [tableView dequeueReusableCellWithIdentifier:@"OrderCell"];
+    Item *instance = [self.table.tableOrder objectAtIndex:indexPath.row];
+    cell.itemFoodLabel.text = [NSString stringWithFormat:@"%@", instance.name];
+    cell.itemPrice.text = [NSString stringWithFormat:@"%.02f", instance.price];
+    return cell;
+    
+}
+
 
 @end

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5B2951D915D40D0D0076E6CD /* ItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B2951D815D40D0D0076E6CD /* ItemCell.m */; };
 		5B2951E015D412F00076E6CD /* ItemTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B2951DF15D412F00076E6CD /* ItemTableView.m */; };
+		5B2951E315D41E120076E6CD /* OrderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B2951E215D41E120076E6CD /* OrderCell.m */; };
 		5B326DA415D2ADF200F5A6FC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B326DA315D2ADF200F5A6FC /* UIKit.framework */; };
 		5B326DA615D2ADF200F5A6FC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B326DA515D2ADF200F5A6FC /* Foundation.framework */; };
 		5B326DA815D2ADF200F5A6FC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B326DA715D2ADF200F5A6FC /* CoreGraphics.framework */; };
@@ -33,6 +34,8 @@
 		5B2951D815D40D0D0076E6CD /* ItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemCell.m; sourceTree = "<group>"; };
 		5B2951DE15D412F00076E6CD /* ItemTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ItemTableView.h; path = ../ItemTableView.h; sourceTree = "<group>"; };
 		5B2951DF15D412F00076E6CD /* ItemTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ItemTableView.m; path = ../ItemTableView.m; sourceTree = "<group>"; };
+		5B2951E115D41E120076E6CD /* OrderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderCell.h; sourceTree = "<group>"; };
+		5B2951E215D41E120076E6CD /* OrderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderCell.m; sourceTree = "<group>"; };
 		5B326D9F15D2ADF200F5A6FC /* Menu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Menu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B326DA315D2ADF200F5A6FC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5B326DA515D2ADF200F5A6FC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -117,6 +120,8 @@
 				5B326DB215D2ADF200F5A6FC /* AppDelegate.h */,
 				5B326DB315D2ADF200F5A6FC /* AppDelegate.m */,
 				5B326DB515D2ADF200F5A6FC /* MainStoryboard.storyboard */,
+				5B2951E115D41E120076E6CD /* OrderCell.h */,
+				5B2951E215D41E120076E6CD /* OrderCell.m */,
 				5B8F727215D2FECC00E2B7F6 /* Item.h */,
 				5B8F727315D2FECD00E2B7F6 /* Item.m */,
 				5B8F727E15D305B900E2B7F6 /* AddItemViewController.h */,
@@ -229,6 +234,7 @@
 				5B8F728315D3083100E2B7F6 /* AddFoodViewController.m in Sources */,
 				5B2951D915D40D0D0076E6CD /* ItemCell.m in Sources */,
 				5B2951E015D412F00076E6CD /* ItemTableView.m in Sources */,
+				5B2951E315D41E120076E6CD /* OrderCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

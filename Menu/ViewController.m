@@ -67,6 +67,7 @@
         TableDetailViewController *detailVC = segue.destinationViewController;
         NSIndexPath *indexPath = [self.tablesTableView indexPathForSelectedRow];
         detailVC.table = [self.tables objectAtIndex:indexPath.row];
+        NSLog(@"newTable = %@", detailVC.table);
         [self.tablesTableView deselectRowAtIndexPath:indexPath animated:YES];
     }
 }

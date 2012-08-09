@@ -7,6 +7,7 @@
 //
 
 #import "GuestTable.h"
+#import "Food.h"
 
 @implementation GuestTable
 
@@ -15,6 +16,7 @@
 @synthesize numberGuests = _numberGuests;
 @synthesize subtotal = _subtotal;
 @synthesize total = _total;
+@synthesize tableOrder = _tableOrder;
 
 + (GuestTable *)tableWithTableNumber:(int)tableNumber numberOfGuests:(int)numberGuests serverNumber:(int)serverNumber;
 {
@@ -26,8 +28,20 @@
     newTable.subtotal = 0.00;
     newTable.total = 0.00;
     
+    NSMutableArray *empty;
+    
+    newTable.tableOrder = [NSMutableArray array];
+    
+    [newTable.tableOrder addObject:[Food foodWithName:@"chicken" price:10.99 type:@"entree" ingredients:empty allergyInformation:@"" modifiers:@""]];
+    [newTable.tableOrder addObject:[Food foodWithName:@"chicken" price:10.99 type:@"entree" ingredients:empty allergyInformation:@"" modifiers:@""]];
+
+    
+    
     return newTable;
 }
+
+
+
 
 
 @end

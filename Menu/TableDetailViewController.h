@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "GuestTable.h"
 
-@interface TableDetailViewController : UIViewController
+@interface TableDetailViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *tableNumberLabel;
 @property (weak, nonatomic) IBOutlet UILabel *numGuestsLabel;
@@ -17,4 +17,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *totalLabel;
 
 @property (strong, nonatomic) GuestTable *table;
+@property (weak, nonatomic) IBOutlet UITableView *orderTable;
+
+
 @end
