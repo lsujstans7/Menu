@@ -29,16 +29,6 @@
 	// Do any additional setup after loading the view, typically from a nib.
     self.tables = [NSMutableArray array];
     
-    self.items = [NSMutableArray array];
-
-    NSMutableArray *empty;
-    
-    [self.items addObject:[Food foodWithName:@"pasta" price:10.99 type:@"entree" ingredients:empty allergyInformation:@"none" modifiers:@"none"]];
-    [self.items addObject:[Food foodWithName:@"steak" price:10.99 type:@"entree" ingredients:empty allergyInformation:@"none" modifiers:@"none"]];
-    [self.items addObject:[Food foodWithName:@"capri" price:10.99 type:@"app" ingredients:empty allergyInformation:@"none" modifiers:@"none"]];
-    [self.items addObject:[Food foodWithName:@"cake" price:10.99 type:@"dessert" ingredients:empty allergyInformation:@"none" modifiers:@"none"]];
-    [self.items addObject:[Food foodWithName:@"chicken" price:10.99 type:@"entree" ingredients:empty allergyInformation:@"" modifiers:@""]];
-    
     
 }
 

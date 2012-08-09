@@ -7,6 +7,8 @@
 //
 
 #import "AddFoodViewController.h"
+#import "Food.h"
+#import "ItemCell.h"
 
 @interface AddFoodViewController ()
 
@@ -14,6 +16,7 @@
 
 @implementation AddFoodViewController
 @synthesize foodName;
+@synthesize items = _items;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -27,6 +30,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.items = [NSMutableArray array];
+    
+    NSMutableArray *empty;
+    
+    [self.items addObject:[Food foodWithName:@"pasta" price:10.99 type:@"entree" ingredients:empty allergyInformation:@"none" modifiers:@"none"]];
+    [self.items addObject:[Food foodWithName:@"steak" price:10.99 type:@"entree" ingredients:empty allergyInformation:@"none" modifiers:@"none"]];
+    [self.items addObject:[Food foodWithName:@"capri" price:10.99 type:@"app" ingredients:empty allergyInformation:@"none" modifiers:@"none"]];
+    [self.items addObject:[Food foodWithName:@"cake" price:10.99 type:@"dessert" ingredients:empty allergyInformation:@"none" modifiers:@"none"]];
+    [self.items addObject:[Food foodWithName:@"chicken" price:10.99 type:@"entree" ingredients:empty allergyInformation:@"" modifiers:@""]];
     
 
     // Uncomment the following line to preserve selection between presentations.
@@ -49,72 +62,20 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-//#pragma mark - Table view data source
-//
-//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-//{
-//#warning Potentially incomplete method implementation.
-//    // Return the number of sections.
-//    return 0;
-//}
-//
-//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-//{
-//#warning Incomplete method implementation.
-//    // Return the number of rows in the section.
-//    return 0;
-//}
-//
-//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    static NSString *CellIdentifier = @"Cell";
-//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-//    
-//    // Configure the cell...
-//    
-//    return cell;
-//}
-//
-///*
-//// Override to support conditional editing of the table view.
-//- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    // Return NO if you do not want the specified item to be editable.
-//    return YES;
-//}
-//*/
-//
-///*
-//// Override to support editing the table view.
-//- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    if (editingStyle == UITableViewCellEditingStyleDelete) {
-//        // Delete the row from the data source
-//        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-//    }   
-//    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-//        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-//    }   
-//}
-//*/
-//
-///*
-//// Override to support rearranging the table view.
-//- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-//{
-//}
-//*/
-//
-///*
-//// Override to support conditional rearranging of the table view.
-//- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    // Return NO if you do not want the item to be re-orderable.
-//    return YES;
-//}
-//*/
-//
-//#pragma mark - Table view delegate
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.items.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    ItemCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ItemCell"];
+    Item *instance = [self.items objectAtIndex:indexPath.row];
+    cell.mainItemLabel.text = [NSString stringWithFormat:@"%@", instance.name];
+    return cell;
+    
+}
+
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {

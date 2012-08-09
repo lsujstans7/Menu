@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AddFoodViewController : UITableViewController
+@interface AddFoodViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *foodName;
+@property (nonatomic, strong) NSMutableArray *items;
 @end

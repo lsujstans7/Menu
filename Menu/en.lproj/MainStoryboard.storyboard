@@ -63,7 +63,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="110" y="65"/>
+            <point key="canvasLocation" x="-3058" y="-523"/>
         </scene>
         <!--Table Detail View Controller - Table Details-->
         <scene sceneID="e6q-5b-kvi">
@@ -116,13 +116,18 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Sq0-rE-Rgk">
+                                <rect key="frame" x="20" y="104" width="280" height="208"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Table Details" id="Lte-r7-PqF">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Vpw-sB-pjo">
                             <connections>
-                                <segue destination="mE6-e9-BOx" kind="modal" id="CVY-pg-h8D"/>
+                                <segue destination="mE6-e9-BOx" kind="push" id="GX2-JK-hcf"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -134,7 +139,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="464" y="579"/>
+            <point key="canvasLocation" x="-2526" y="119"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="OgV-bV-49o">
@@ -142,7 +147,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sis-e6-86E" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="mE6-e9-BOx" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jSP-WR-vCd" customClass="AddItemViewController">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="HTV-L1-mvW">
@@ -156,6 +161,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="m9g-hN-TYJ" kind="push" id="S2x-Si-mcb"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ufd-qI-3cB">
                                 <rect key="frame" x="47" y="275" width="227" height="65"/>
@@ -175,19 +183,19 @@
                     <navigationItem key="navigationItem" id="58Y-8P-bVF"/>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="899" y="579"/>
+            <point key="canvasLocation" x="-2091" y="119"/>
         </scene>
         <!--Add Food View Controller-->
         <scene sceneID="FCM-fa-C9c">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HeJ-AZ-3RS" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="m9g-hN-TYJ" customClass="AddFoodViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ML9-mR-637">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ML9-mR-637" customClass="ItemTableView">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="xXC-h3-xgn">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ItemCell" id="xXC-h3-xgn" customClass="ItemCell">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -204,6 +212,9 @@
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <connections>
+                                    <outlet property="mainItemLabel" destination="oHf-Oz-gEF" id="SvE-zx-rpU"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -211,12 +222,10 @@
                             <outlet property="delegate" destination="m9g-hN-TYJ" id="Kfk-0P-rqY"/>
                         </connections>
                     </tableView>
-                    <connections>
-                        <outlet property="foodName" destination="oHf-Oz-gEF" id="gzy-1b-72U"/>
-                    </connections>
+                    <navigationItem key="navigationItem" id="AEk-Ky-R6r"/>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="722" y="1169"/>
+            <point key="canvasLocation" x="-1645" y="110"/>
         </scene>
         <!--Add Table Controller-->
         <scene sceneID="MHS-qY-Rhf">
@@ -311,7 +320,7 @@
                     </connections>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="877" y="-474"/>
+            <point key="canvasLocation" x="-2113" y="-1066"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="79g-Fu-vDg">
@@ -326,7 +335,7 @@
                     </connections>
                 </navigationController>
             </objects>
-            <point key="canvasLocation" x="464" y="-474"/>
+            <point key="canvasLocation" x="-2526" y="-1066"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6WO-lm-TCW">
@@ -341,7 +350,7 @@
                     </connections>
                 </navigationController>
             </objects>
-            <point key="canvasLocation" x="-352" y="65"/>
+            <point key="canvasLocation" x="-3520" y="-523"/>
         </scene>
     </scenes>
     <classes>
@@ -362,6 +371,15 @@
                 <relationship kind="outlet" name="serverNumberTextField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="tableNumberTextField" candidateClass="UITextField"/>
             </relationships>
+        </class>
+        <class className="ItemCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ItemCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="mainItemLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="ItemTableView" superclassName="UITableView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ItemTableView.h"/>
         </class>
         <class className="TableCell" superclassName="UITableViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TableCell.h"/>
