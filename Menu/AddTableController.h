@@ -15,7 +15,7 @@
 @protocol AddTableControllerDelegate <NSObject>
 // Define to methods to be called on our delegate
 - (void)addTableController:(AddTableController *)addVC didSaveItem:(GuestTable *)newTable;
-//- (void)addTableControllerDidCancel:(AddTableController *)addVC;
+- (void)addTableControllerDidCancel:(AddTableController *)addVC;
 @end
 
 @interface AddTableController : UITableViewController
@@ -24,6 +24,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *serverNumberTextField;
 
 - (IBAction)addTableDone:(UIBarButtonItem *)sender;
+- (IBAction)cancel:(UIBarButtonItem *)sender;
 
 @property (weak, nonatomic) id <AddTableControllerDelegate> delegate;
 @end

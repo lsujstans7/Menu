@@ -80,5 +80,12 @@
     [self.tables addObject:newTable];
     // We then have to call reloadData on tableview to tell it to refresh data
     [self.tablesTableView reloadData];
-    }
+}
+
+-(void)addTableControllerDidCancel:(AddTableController *)addVC
+{
+    
+}
 @end
+
+

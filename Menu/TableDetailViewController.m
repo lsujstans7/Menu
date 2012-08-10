@@ -77,5 +77,19 @@
     
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"AddItemSegue"]) {
+        AddFoodViewController *addVC = (AddFoodViewController *)segue.destinationViewController;
+        addVC.delegate = self;
+    }
+}
+
+- (void)addFoodViewController:(AddFoodViewController *)addVC didSaveItem:(Item *)newItem
+{
+    [self.table.tableOrder addObject:newItem];
+    [self.orderTable reloadData];
+}
+
 
 @end

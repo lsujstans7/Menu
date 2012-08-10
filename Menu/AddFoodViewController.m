@@ -18,6 +18,7 @@
 @implementation AddFoodViewController
 @synthesize foodName;
 @synthesize items = _items;
+@synthesize delegate = _delegate;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -80,13 +81,15 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    [self.navigationController popViewControllerAnimated:YES];
+    
+    Item *newItem;
+    
+    newItem = [self.items objectAtIndex:indexPath.row];
+    
+    [self.delegate addFoodViewController:self didSaveItem:newItem];
+    
+    
 }
 
 @end

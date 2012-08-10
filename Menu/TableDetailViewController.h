@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "GuestTable.h"
+#import "AddFoodViewController.h"
 
-@interface TableDetailViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+
+@interface TableDetailViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, AddFoodViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *tableNumberLabel;
 @property (weak, nonatomic) IBOutlet UILabel *numGuestsLabel;

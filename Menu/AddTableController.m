@@ -152,4 +152,9 @@
     
     [self.delegate addTableController:self didSaveItem:newTable];
 }
+
+- (IBAction)cancel:(UIBarButtonItem *)sender {
+    [self dismissModalViewControllerAnimated:YES];
+    [self.delegate addTableControllerDidCancel:self];
+}
 @end
