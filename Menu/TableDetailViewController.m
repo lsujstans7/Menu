@@ -89,6 +89,8 @@
 {
     [self.table.tableOrder addObject:newItem];
     [self.orderTable reloadData];
+    self.subtotalLabel.text = [NSString stringWithFormat:@"%.02f", [self.table getSubtotal]];
+    self.totalLabel.text = [NSString stringWithFormat:@"%.02f", ([self.table getSubtotal] + ([self.table getSubtotal] * 0.09 ))] ;
 }
 
 
